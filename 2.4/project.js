@@ -68,18 +68,32 @@ function newCustomer() {
     }
   }
   let tableNumber = 0;
-  if (tableSizes.indexOf(size) >= 0) {
-    tableNumber = tableSizes.indexOf(size);
-  } else {
-    tableNumber = tableSizes.indexOf(Math.max(...tableSizes));
-  }
-  alert(
-    "You got a table of number: " +
-      tableNumber +
-      ", which by default can fit " +
-      tableSizes[tableNumber] +
-      " people."
-  );
-  customers.push([name, tableNumber]);
-  console.log(customers);
+    let tableFound = [];
+    for (let i = 0; i < tableSizes.length; i++) {
+        let available = true;
+        for (let j = 0; j < customers.length; j++) {
+            if (customers[j][1] == i) {
+                available = false;
+                break;
+            }
+        }
+          if (tableSizes[i] >=size && available) {
+        tableFound.push(i);
+    } 
+    }
+    if (tableFound.length>0){
+        tableNumber = tableFound.reduce((minIndex, currentIndex)=>{
+            if (tableSizes[minIndex]<tableSizes[currentIndex]){
+                return minIndex;
+            }else{
+                return currentIndex;
+            }
+        });
+        customers.push([name, tableNumber]);
+    }else{
+        console.log("Sorry, no table available for you.");
+    }
+    console.log(customers);
+    console.log(tableSizes);
+    
 }
