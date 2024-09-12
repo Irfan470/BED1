@@ -1,0 +1,31 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+img {
+  width: 150px;
+  height: 150px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+p {
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+}
+#id37 {
+  background-color: rgb(39, 122, 150);
+}
+.class1 {
+  color: red;
+}   
+#button1 {
+  height: 100px;
+  
+}
+button {
+  background-color: #4CAF50;
+  width: 30%;
+  min-width: 50px;
+  max-width: 100px;
+}
