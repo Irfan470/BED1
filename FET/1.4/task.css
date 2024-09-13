@@ -1,0 +1,29 @@
+/* div{
+    display: inline;
+    border: solid 1px black ;
+    border-radius: 15%;
+    background-color: seagreen;
+    width: 300px;
+} */
+.menu{
+    float: left;
+    border: solid 1px black ;
+    border-radius: 10px;
+    background-color: rgb(115, 141, 127);
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+    transition: background-color 1s, height 1s;
+
+
+}
+.menu:hover{
+   
+  
+    background-color: rgb(209, 132, 43);
+    height: 100px;
+   
+}
