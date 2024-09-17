@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1>Program</h1>
+    <p id="demo">Hello World</p>
+    <!-- <button onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript'">Click me</button> -->
+<!-- <script>document.getElementById("demo").innerHTML= "hello javascfcript"; </script> -->
+ <script>
+    setInterval(()=>{
+        if (Math.random() > 0.5) {
+            document.getElementById("demo").style.backgroundColor = "red";
+        } else {
+            document.getElementById("demo").style.backgroundColor = "blue";
+        }
+    })
+ </script>
+ <p id="para1">Para 1</p>
+    <p id="para2">Para 2</p>
+    <p id="para3">Para 3</p>
+    <script>
+        setInterval(()=>{
+            currentFontSize = window.getComputedStyle(document.getElementById("para1"), null).getPropertyValue('font-size');
+            parsedFontSize = parseFloat(currentFontSize.slice(0, -2));
+            document.getElementById("para1").style.fontSize =  Math.random()>0.5 ? `${parsedFontSize *2}px` : `${parsedFontSize /2}px`;
+        } , 1000);
+        setInterval(()=>{
+            document.getElementById("para2").innerHTML = "Today is " + new Date();
+        } , 1000);
+        setInterval(()=>{
+            document.getElementById("para3").style.color = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+        } , 1000);
+
+        </script>
+       
+</body>
+</html>
