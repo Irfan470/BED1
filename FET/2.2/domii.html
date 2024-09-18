@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bind the function to the event using the HTML attribute -->
+    <!-- <h1 onclick="changeText(this)">
+        Click on this text!
+    </h1>
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Oooops!";
+        } -->
+    </script>
+    <h1 id="myHeader"> Click on this text</h1>
+    <script>
+        //bind the function to the event using the DOM
+        // function changeText() {
+        //     document.getElementById("myHeader").innerHTML = "Oooops!";
+        // }
+        // document.getElementById("myHeader").onclick = changeText;
+        document.getElementById("myHeader").addEventListener("click", myFunction);
+        function myFunction() {
+alert("Hello World!");       }
+window.addEventListener("resize", () => { alert("Resized!"); });
+   
+    
+    </script>
+    
+</body>
+</html>
