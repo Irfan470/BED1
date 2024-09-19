@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>The Window History Object</h1>
+       <p><button onclick="goBack()">Go 5 sites back in the past</button></p>
+        <script>
+            function goBack() {
+                if (window.history.length > 5) {
+                    window.history.go(-5);
+                } else {
+                window.history.go(-(history.length - 1));
+            }
+        }
+        </script>
+
+    </body>
+</html>

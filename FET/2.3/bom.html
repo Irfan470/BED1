@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><button onclick="openWin()" >Start</button></p>
+    <script>
+       let myWindow;
+         function openWin() {
+              myWindow = window.open("", "myWindow", "width=200,height=100");
+              setTimeout(()=>{
+                resizeWin()
+              }, 2000)
+         }+
+            function resizeWin() {
+                myWindow.resizeTo(500, 500);
+setTimeout(()=>{
+        moveWinTo()
+}, 5000)            }
+            function moveWinTo() {
+                myWindow.moveTo(1, 999);
+                setTimeout(()=>{
+                    myWindow.close()
+                }, 2000)
+            }
+    </script>
+    
+</body>
+</html>

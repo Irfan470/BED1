@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="newWindow()"> new window</button>
+    <button onclick="smallWindow()">Small window</button>
+    <button onclick="showUrl()">Show Url</button>
+    <button onclick="goForward()">Go forward</button>
+    <button onclick="goBack()">Go back</button>
+
+    
+    <script>
+        let myWindow;
+        function newWindow() {
+            myWindow = window.open("", "myWindow", "width=800,height=800");
+        }
+        function smallWindow() {
+            myWindow.resizeTo(200, 200);
+        }
+        function showUrl() {
+            setTimeout(()=>{
+                alert(myWindow.location.href);
+            }, 2000)
+            ;
+        }
+        function goForward() {
+            myWindow.history.forward();
+        }
+        function goBack() {
+            myWindow.history.back();
+        }
+    </script>
+</body>
+</html>
