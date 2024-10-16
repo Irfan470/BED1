@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const anObj={
+            value:10
+        }
+
+            const increment= function(){
+                anObj.value++;
+                console.log(anObj.value);
+            }
+            const decrement= function(){
+                anObj.value--;
+                console.log(anObj.value);
+            }
+        
+        console.log(anObj.value);
+        // const emptyObject = {};
+        // const addProperty = () => {
+        //     emptyObject.new = 10;
+        //     console.log(emptyObject);
+        // };
+        // const deleteProperty = () => {
+        //     delete emptyObject.new;
+        //     console.log(emptyObject);
+        // };
+        // const mathScore = {
+        //     homeScore: 0,
+        //     awayScore: 0,
+        //     homeGoal: function () {
+        //         this.homeScore++;
+        //     },
+        //     awayGoal: function () {
+        //         this.awayScore++;
+        //     },
+        // };
+        // console.log(mathScore.homeScore);
+        // mathScore.homeGoal();
+        // console.log(mathScore.homeScore);
+        // mathScore.awayGoal();
+        // console.log(mathScore.awayScore);
+        
+
+        
+    </script>
+</head>
+<body>
+    <!-- <button onclick="addProperty()">Add property</button>
+    <button onclick="deleteProperty()">Delete property</button> -->
+    <button onclick="increment()" >Increment</button>
+    <button onclick="decrement()" >Decrement</button>
+    
+</body>
+</html>

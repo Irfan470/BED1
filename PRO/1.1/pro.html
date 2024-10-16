@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            const myObject = {
+                name: "value",
+                numberName: 20,
+                smallObject: {
+                    smallName1: 30,
+                    smallName2: 30,
+                },
+                myFunc: function (status) {
+                    this.myStatus = status;
+                },
+            };
+            console.log(myObject.name);
+            console.log(myObject.numberName);
+            console.log(myObject.smallObject.smallName1);
+            console.log(myObject.smallObject.smallName2);
+            myObject.name = "new value";
+            myObject.myFunc("active");
+            console.log(myObject.myStatus);
+            console.log(myObject.name);
+// const myObject2 = myObject;
+// myObject2.name = "new value 2";
+// console.log(myObject.name);
+function getPropertyName() {
+      return "name";
+  }
+  var x = getPropertyName();
+  myObject[x];
+    console.log(myObject[x]);
+    myObject.numberName2 = 80;
+    console.log(myObject.numberName2);
+    delete myObject.numberName2;
+    console.log(myObject.numberName2);
+    const obj={}
+    obj.name=name;
+    obj.bigName=function(){
+        return this.name.toUpperCase();
+    }
+    console.log(obj.bigName());
+
+        </script>
+    </body>
+</html>

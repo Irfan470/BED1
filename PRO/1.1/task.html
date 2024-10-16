@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj={
+            a:20,
+            b:10,
+        add:function(){
+            console.log(this.a+this.b);
+        },
+        subtract:function(){
+            console.log(this.a-this.b);
+        },
+        }
+const modify = function(){
+    const name = prompt("Enter the name of the property");
+    if(obj[name]!=null){
+        const newValue = prompt("Enter new value");
+        if(!isNaN(newValue)){
+            obj[name]=parseInt(newValue);
+        }
+    }
+
+
+}
+
+    </script>
+</head>
+<body>
+    <button onclick="modify()">Add name</button>
+    <button onclick="obj.add()">Add</button>
+    <button onclick="obj.subtract()">Subtract</button>
+</body>
+</html>

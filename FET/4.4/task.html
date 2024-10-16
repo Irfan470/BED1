@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#liveToastBtn").click(function(){
+                $("#liveToast").toast("show");
+            });
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <ul class="nav nav-pills" >
+        <li class="nav-item">
+            <a class="nav-link" href="https://google.com">link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://google.com">link</a>
+        </li>
+    </ul>
+    <h1 class="display-1">My heading</h1>
+    <table class="table table-hover">
+        <tr class="table-danger">
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr class="table-success">
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr class="table-primary">
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </table>
+        <button class="btn btn-outline-danger">Click me</button>
+        <button class="btn btn-sm btn-success">Click me</button>
+        <a href="https://google.com" class="btn btn-lg btn-warning">Click me</a>
+        <ul class="list-group">
+            <li class="list-group-item"> first element</li>
+            <li class="list-group-item"> second element</li>
+            <li class="list-group-item"> third element</li>
+           
+        </ul>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button"  data-bs-toggle="dropdown" >
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu" >
+                <li ><a class="dropdown-item" href="https://google.com">first item</a> </li>
+                <li ><a class="dropdown-item" href="https://google.com">second item</a> </li>
+                <li ><a class="dropdown-item" href="https://google.com">third item</a> </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li ><a class="dropdown-item" href="https://google.com">fourth item</a> </li>
+              </ul>
+            <!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button> -->
+            <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="https://google.com">Action</a>
+              <a class="dropdown-item" href="https://google.com">Another action</a>
+              <a class="dropdown-item" href="https://google.com">Something else here</a>
+            </div> -->
+
+<div id="carouselExampleControls" class="container p-5 carousel slide " data-bs-ride="carousel" >
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649" class="d-block w-100" alt="image1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" class="d-block w-100" alt="image2">
+
+        </div>
+    
+    </div>
+</div>  
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="btn-warning col">cplumn</div>
+        <div class="btn-success col">column</div>
+        <div class="btn-danger col">column</div>
+        <div class="btn-primary col">column</div>
+    </div>
+</div>  
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body text-success">
+        Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>        
+
+
+
+    </body>
+</html>
