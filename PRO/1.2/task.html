@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //classes as objects
+        class Dog{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            bark(){
+                console.log("Bark Bark");
+            }
+            birth(){
+                const currentYear = new Date().getFullYear();
+                return currentYear - this.age;
+            }
+        }
+        const dog1 = new Dog("Bingo", 5);
+        console.log(dog1);
+        dog1.bark();
+        //object constructor
+        function DogFunction(name, age){
+            this.name = name;
+            this.age = age;
+            this.bark = function(){
+                console.log("Bark Bark");
+            }
+            this.birth = function(){
+                const currentYear = new Date().getFullYear();
+                return currentYear - this.age;
+            }
+        }
+        const dog2 = new DogFunction("Bingo", 5);
+        console.log(dog2);
+        dog2.bark();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
