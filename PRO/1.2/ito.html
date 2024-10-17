@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //classes as objects
+//         const myObject = {
+//       name: "value",
+//       numberName: 20,
+//       smallObject: {
+//           smallName1: 30,
+//           smallName2: 30,
+//       },
+//       myFunc: function (status) {
+//           this.myStatus = status;
+//       },
+//   };
+//     console.log(myObject);
+//     object constructor
+//     class MyClass {
+//     constructor(
+//         name,
+//         numberName,
+//         smallName1,
+//         smallName2,
+//         status
+//     ) {
+//         this.name = name;
+//         this.numberName = numberName;
+//         this.smallObject = {
+//             smallName1: smallName1,
+//             smallName2: smallName2
+//         }
+//         this.myStatus = status;
+//     }
+//     myFunc(statusValue) {
+//         this.myStatus = statusValue;
+//     }
+// }
+// const myClass = new MyClass("value", 20, 30, 30, "active");
+// console.log(myClass);
+// function MyFunction (
+//     name,
+//     numberName,
+//     smallName1,
+//     smallName2,
+//     status
+// ) {
+//     this.name = name;
+//     this.numberName = numberName;
+//     this.smallObject = {
+//         smallName1: smallName1,
+//         smallName2: smallName2
+//     }
+//     this.myStatus = status;
+//     this.myFunc = function(statusValue) {
+//         this.myStatus = statusValue;
+//     }
+// }
+// const myFunction = new MyFunction("value", 20, 30, 30, "active");
+// console.log(myFunction);
+// Object iterables
+// numbers = {};
+// numbers[Symbol.iterator] = function() {
+//   let n = 0;
+//   done = false;
+//   return {
+//     next() {
+//       n += 2;
+//       if (n == 10) {done = true}
+//       return {value:n, done:done};
+//     }
+//   };
+// }
+// for (let number of numbers) {
+//     console.log(number);
+// }
+//global objects
+function Person (
+        name,
+        surname,
+        dateOfBirth
+    ) {
+        this.name = name;
+        this.surname = surname;
+        this.dateOfBirth = dateOfBirth;
+        this.currentAge = function() {
+            var today = new Date();
+            var birthDate = new Date(dateOfBirth);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+    }
+    const person = new Person("John", "Doe", "1990-01-01");
+    console.log(person.currentAge());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
