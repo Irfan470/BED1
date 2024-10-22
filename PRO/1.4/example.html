@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing for an empty object</title>
+</head>
+<body>
+    <script>
+        const emptyObject = {};
+        const nonEmptyObject = { name: "value" };
+        const stringContent = "string";
+        const numberContent = 123;
+        const arrayContent = ["data1", "data2", "data3"];
+        const dateContent = new Date();
+    
+        const testData = (data) => {
+            if (typeof data === 'object' && data !== null && !Array.isArray(data)) {
+                if (Object.keys(data).length === 0) {
+                    console.log('Empty Object:', data);
+                } else {
+                    console.log('Not an empty object:', data);
+                }
+            } else if (Array.isArray(data)) {
+                console.log('Array:', data);
+            } else if (typeof data === 'string') {
+                console.log('String:', data);
+            } else if (typeof data === 'number') {
+                console.log('Number:', data);
+            } else if (data instanceof Date) {
+                console.log('Date:', data);
+            } else {
+                console.log('Unknown Type:', data);
+            }
+        }
+    
+        // Testing the function with different types
+        testData(emptyObject);        // Should log: "Empty Object: {}"
+        testData(nonEmptyObject);     // Should log: "Not an empty object: { name: 'value' }"
+        testData(stringContent);      // Should log: "String: string"
+        testData(numberContent);      // Should log: "Number: 123"
+        testData(arrayContent);       // Should log: "Array: ['data1', 'data2', 'data3']"
+        testData(dateContent);        // Should log: "Date: <current date>"
+    </script>
+    
+</body>
+</html>
