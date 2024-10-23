@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //In OOP, the class would look like this:
+
+
+        class Person {
+    constructor(name, friends) {
+        this.name = name;
+        this.friends = friends;
+    }
+    isFriend(person) {
+        return this.friends.includes(person);
+    }
+
+}
+
+//In functional programming, the function would look like this:
+
+const personFriends = ["Joe", "Alice", "Bob"];
+const person = 'Joe';
+const isFriend = function (friends, person) {
+  return friends.includes(person);
+};
+console.log(isFriend(personFriends, person));
+
+//mutable approach
+let person1 = {name: "Alice", age:27}
+person1.age = 28;
+console.log(person1);
+//immutable approach
+let person2 = {name: "joe", age:32}
+const updatedPerson = {...person2, age:33} //this creates a new object with the updated age
+console.log(updatedPerson);
+console.log(person2);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

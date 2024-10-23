@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //oop approach
+        class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    updateAge(newAge) {
+        this.age += 1;
+
+    }
+}
+let person1 = new Person("Alice", 27);
+person1.updateAge();
+console.log(person1);
+// functional approach, separate the data from the function
+const person = {name: "Joe", age: 32};//data
+//////////////////////////////separation/////////////////////////////////////////////
+const updateAge = function(person) { //function
+    return {...person, age: person.age + 1};
+};
+const updatedPerson = updateAge(person);
+console.log(updatedPerson);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

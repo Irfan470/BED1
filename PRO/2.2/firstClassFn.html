@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //assigning a function to a variable
+        // const add = function(a, b) {
+        //     return a + b;
+        // };
+        // console.log(add(2, 3));
+        // //passing a function as an argument
+        // const subtract = function(a, b) {
+        //     return a - b;
+        // };
+        // const calculate = function(fn, a, b) {
+        //     return fn(a, b);
+        // };
+        // console.log(calculate(subtract, 5, 2));
+        // //returning a function
+        // const createMultiplier = function(multiplier) {
+        //     return function(x) {
+        //         return x * multiplier;
+        //     };
+        // };
+        // const double = createMultiplier(2);
+        // console.log(double(5));
+        // //function that returns a function that returns a function
+        // const createMultiplier2 = function(multiplier) {
+        //     return function(x) {
+        //         return function(y) {
+        //             return x * y * multiplier;
+        //         };
+        //     };
+        // };
+        // const triple = createMultiplier2(3);
+        // console.log(triple(2)(3));
+        // assigning a function to a variable
+        const greet = function(name){
+            return `Hello, ${name}!`;
+
+        }
+        console.log(greet("Alice"));
+        //passing a function as an argument
+        const sayHello = function(greetFn, name) {
+            return greetFn(name);
+        };
+        console.log(sayHello(greet, "Bob"));
+        //returning a function from a function
+        const createGreeting = function(greeting) {
+            return function(name) {
+                return `${greeting}, ${name}!`;
+            };
+        };
+        const greeter = createGreeting("Good morning");
+        console.log(greeter("Alice"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
