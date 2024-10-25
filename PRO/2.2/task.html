@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const TextGenerator= ({textToAdd})=>{
+            var _textToAdd = textToAdd;
+
+
+            return{
+              generateText:x=>y=>x+y+_textToAdd,
+              setTextToAdd:(newTextToAdd)=>_textToAdd = newTextToAdd
+
+            }
+
+        }
+        const tg= TextGenerator({textToAdd:"!"});
+        const fun = tg.generateText("Hello")
+        console.log(fun("World"));
+        tg.setTextToAdd( "?");
+        console.log(fun("World"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
