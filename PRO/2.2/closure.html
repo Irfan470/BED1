@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const Student =({
+            name, age, course, university
+        })=>{var _name = name;
+        var _age = age;
+        var _course = course;
+        var _university = university;
+        return{
+            getName:()=>_name,
+            getAge:()=>_age,
+            getCourse:()=>_course,
+            getUniversity:()=>_university,
+            setUniversity:(newUniversity)=>_university = newUniversity
+        }
+        }
+        const student1 = Student({
+            name: "Alice",
+            age: 20,
+            course: "Computer Science",
+            university: "MIT"
+        });
+        console.log(student1.getName());
+        console.log(student1.getUniversity());
+
+        student1.setUniversity("Harvard");
+        console.log(student1.getUniversity());  
+        const createName=()=>{
+            const myName = "Alice";
+            return ()=>{
+              console.log(`My name is ${myName}`);
+            }
+        }
+        const sayName = createName();
+        sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
