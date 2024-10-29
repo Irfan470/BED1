@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const numbers = [1, 2, 5, 9, 12]
+
+const allEven = numbers.every( x => x % 2 == 0); // false
+const someEven = numbers.some( x => x % 2 == 0); // true
+const reversed = numbers.slice().reverse(); // [12, 9, 5, 2, 1]
+const ascendingStrings = (a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+}
+const sorted = numbers.slice().sort(ascendingStrings); // [1, 12, 2, 5, 9]
+const addThree= (a, b, c) => a + b + c;
+const addPartial= x=>(y,z)=>addThree(x,y,z);
+const addTwo = addPartial(0);
+const sum = addTwo(1, 2); // 3
+//addTwoAndIncreaseByFive()
+const addTwoAndIncreaseByFive = (x, y) => addTwo(x, y) + 5;
+const sum2 = addTwoAndIncreaseByFive(1, 2); // 8
+// addTwoAndDecrement()
+const addTwoAndDecrement = (x, y) => addTwo(x, y) - 1;
+const sum3 = addTwoAndDecrement(1, 2); // 2
+function curry(fn) {
+    return function(a){
+        return function(b){
+return function(c){
+    return fn(a,b,c);
+}
+        }
+    }
+
+}
+function sum(a,b,c){
+    return a+b+c;
+}
+let curriedSum = curry(sum);
+let sum4 = curriedSum(1)(2)(3); // 6
+const add = (x, y, z) => x + y + z;
+var func1 = add.bind(null, 1, 2);
+var func2 = add.bind(null, 10);
+func1(10); // 13
+func2(1, 5); // 16
+const add2 = (x, y, z) => x + y + z;
+console.log(add2(1,2,3))
+console.log(add2.apply(null, [1, 2, 3]));
+const add3 = (x, y, z) => x + y + z;
+console.log(add3(1,2,3))
+console.log(add3.call(null, 1, 2, 3));
+function add(x = 0, y = 0) {
+  const total = x + y;
+  return {
+    add: add.bind(null, total),
+    done: () => total
+  }
+}
+
+add(2).add(3).add(5).add(1).done(); // 11
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
