@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Pizza{
+            constructor(nationality){
+                this.nationality = nationality;
+            }
+            getName(){
+                return this.nationality;
+        }
+        }
+        class ItalianPizza extends Pizza{
+            constructor(){
+                super("Italian");
+            }
+        }
+        class AmericanPizza extends Pizza{
+            constructor(){
+                super("American");
+            }
+        }
+        class Pasta{
+            constructor(nationality){
+                this.nationality= nationality;
+            }
+            getName(){
+                return this.nationality;
+            }   
+        }
+        class ItalianPasta extends Pasta{
+            constructor(){
+                super("Italian");
+            }
+        }
+        class ChinesePasta extends Pasta{
+            constructor(){
+                super("Chinese");
+            }
+        }
+
+        
+        class Chicken{
+            constructor(nationality){
+                this.nationality =nationality;
+            }
+            getName(){
+                return this.national
+            }
+        }
+        class AmericanChicken extends Chicken{
+            constructor(){
+                super("American");
+            }
+        }
+        class ChineseChicken extends Chicken{
+            constructor(){
+                super("Chinese");
+            }
+        }
+
+
+class AmericanRestaurant{
+     americanChicken = new AmericanChicken();
+     americanPizza = new AmericanPizza();
+    prepareDish(type){
+       switch(type){
+           case 'pizza':
+            return this.americanPizza;
+             
+           case 'chicken':
+                return this.americanChicken;
+                case 'pasta':
+                console.log('pasta isnt available');
+                return
+
+       }
+
+    }
+}
+class ItalianRestaurant{
+    italianPizza = new ItalianPizza();
+    italianPasta = new ItalianPasta();
+    prepareDish(type){
+        switch(type){
+            case 'pizza':
+                return this.italianPizza;
+            case 'pasta':
+                return this.italianPasta;
+            case 'chicken':
+                console.log('chicken isnt available');
+                return
+
+        }
+    }
+}
+class ChineseRestaurant{
+    chinesePasta = new ChinesePasta();
+    chineseChicken = new ChineseChicken();
+    prepareDish(type){
+        switch(type){
+            
+            case 'pasta':
+                return this.chinesePasta;
+            case 'chicken':
+                return this.chineseChicken;
+                case 'pizza':
+                console.log('pizza isnt available');
+                return
+        }
+    }
+}
+const americanRestaurant = new AmericanRestaurant();
+const italianRestaurant = new ItalianRestaurant();
+const chineseRestaurant = new ChineseRestaurant();
+const DishMaker = (dish, nationality) => {
+    switch(nationality){
+        case 'american':
+            return americanRestaurant.prepareDish(dish);
+        case 'italian':
+            return italianRestaurant.prepareDish(dish);
+        case 'chinese':
+            return chineseRestaurant.prepareDish(dish);
+    }
+}
+const myDish= DishMaker('pizza', 'american');
+console.log(myDish)
+const myDish2= DishMaker('pasta', 'american');
+console.log(myDish2)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

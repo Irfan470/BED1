@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         // Singleton Design Pattern
+//         let instance = null;
+//         class Person{
+//             constructor(name,age, gender){
+//                 if(!instance){
+//                     this.name = name;
+//                     this.age = age;
+//                     this.gender= gender;
+//                     instance = this;
+//                 }else{
+//                     return instance;
+//                 }
+//             }
+//         }
+//         const johne = new Person("Johne", 23, 'male');
+//         const barbara = new Person("Barbara", 32, 'female')
+//         console.log(john);
+//         console.log(barbara);
+//         //factory design pattern
+//         class Person{
+//             constructor(name, age, gender){
+//                 this.name = name;
+//                 this.age = age;
+//                 this.gender= gender;
+//         }
+//         }
+//         class personFactory{
+//             createPerson(type){
+//                 switch(type){
+//                     case 'John':
+//                         return new Person("John", 23, 'male')
+//                     case 'Barbar':
+//                         return new Person("Barbar", 32,'female')
+//                 }
+//             }
+//         }
+//         const factory = new personFactory();
+//         const john = factory.createPerson('John');
+//         const barbar = factory.createPerson('Barbar');
+
+// class Teacher{
+//     constructor(name, age, gender) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+// }
+
+// class TeacherFactory {
+//     createPerson(type) {
+//         switch(type) {
+//             case 'John':
+//                 return new Teacher("John", 32, 'male');
+//             case 'Barbara':
+//                 return new Teacher("Barbara", 37, 'female');
+//         }
+//     }
+// }
+
+// class Student{
+//     constructor(name, age, gender) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+// }
+
+// class StudentFactory {
+//     createPerson(type) {
+//         switch(type) {
+//             case 'Mark':
+//                 return new Student("Mark", 23, 'male');
+//             case 'Margaret':
+//                 return new Student("Margaret", 21, 'female');
+//         }
+//     }
+// }
+
+// const teacherFactory = new TeacherFactory();
+// const studentFactory = new StudentFactory();
+
+// const peopleFacturer = (type, model) => {
+//     switch(type) {
+//         case 'teacher':
+//             return teacherFactory.createPerson(model);
+//         case 'student':
+//             return studentFactory.createPerson(model);
+//     }
+// }
+
+// const irfan = peopleFacturer('teacher', 'irfan');
+// console.log(irfan);
+
+// //mixin structural design pattern
+// let sayHiMixin = {
+//     sayHi() {
+//         alert(`Hello ${this.name}`);
+//     },
+//     sayBye() {
+//         alert(`Bye ${this.name}`);
+//     }
+// };
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+
+// Object.assign(User.prototype, sayHiMixin);
+
+// new User("John").sayHi();
+// fasade design pattern
+// $(el).css()
+// the constructor to decorate
+function Pizza() {
+    this.price = function() { return 10; };
+    this.name = function() { return 'Pizza'; };
+}
+//decorator 1
+function ExtraCheese(pizza) {
+    var prevPrice = pizza.price();
+    pizza.price = function() {
+        return prevPrice + 2;
+    };
+}
+//decorator 2
+function ExtraTomato(pizza) {
+    var prevPrice = pizza.price();
+    pizza.price = function() {
+        return prevPrice + 1;
+    };
+}
+//usage
+const myPizza = new Pizza();
+ExtraCheese(myPizza);
+ExtraTomato(myPizza);
+console.log(myPizza.price());
+
+
+
+                            </script>
+</head>
+<body>
+    
+</body>
+</html>
